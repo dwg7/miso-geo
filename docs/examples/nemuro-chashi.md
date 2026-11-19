@@ -10,7 +10,7 @@
 - [根室半島チャシ跡群 — Wikipedia 日本語版](https://ja.wikipedia.org/wiki/根室半島チャシ跡群)(2026-10-31 参照。指定年月日、構成数、群の座標)
 
 ## geometry
-```json
+```geojson
 {
   "type": "Point",
   "coordinates": [145.7825, 43.38861]
@@ -30,7 +30,7 @@
 - [根室半島チャシ跡群 — Wikipedia 日本語版](https://ja.wikipedia.org/wiki/根室半島チャシ跡群)(所在地と形式)
 
 ## geometry
-```json
+```geojson
 {
   "type": "Point",
   "coordinates": [145.7815296, 43.3874042]

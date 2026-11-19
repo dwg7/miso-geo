@@ -30,13 +30,14 @@
 - [Yukuepira Chashi — Wikipedia](https://en.wikipedia.org/wiki/Yukuepira_Chashi)
 
 ## geometry
-```json
+```geojson
 { "type": "Point", "coordinates": [143.735727, 43.464356] }
 ```
 ````
 
 - `# /仮想パス` は、ファイル全体で一意にします。
 - `- status:` は踏み跡ごとに1つ。ジオメトリは所属する踏み跡の状態を引き継ぎます。
+- コードフェンスは `geojson`(`json` も読めます)。GitHub 上のプレビューでも、地図として描かれます。
 - `## geometry` は1つの踏み跡に高々1つ。`### geometry` は認めません。踏み跡の中の要素ごとに別の位置を付けたいときは、その要素を別の踏み跡に分けます。
 
 ### 5つの状態
@@ -79,6 +80,7 @@ python3 scripts/check_miso.py
 ```
 AGENTS.md      エージェントへの指示(正本)。CLAUDE.md はこれを読み込むだけ
 DECISIONS.md   決めたことと理由
+PRIOR-ART.md   先行例の調査(GitHub、Kartographer、EOxElements など)
 site/          ビューアのソース(Vite + MapLibre GL JS)
 docs/          GitHub Pages の配信ルート
   examples/    Markdown のインスタンス(正本)
