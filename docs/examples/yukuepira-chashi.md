@@ -11,7 +11,7 @@
 - [文化遺産オンライン 検索結果](https://online.bunka.go.jp/heritages/search/item_209410:1)(ユクエピラチャシ跡が北海道の史跡として載っている。2026-10-31 参照)
 
 ## geometry
-```json
+```geojson
 {
   "type": "Point",
   "coordinates": [143.735727, 43.464356]

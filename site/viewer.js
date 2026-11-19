@@ -30,7 +30,7 @@ function parse(text) {
     if (f) {
       if (!fence) {
         fence = f[1];
-        if (geom === 'wait' && f[2] === 'json') { geom = []; continue; }
+        if (geom === 'wait' && (f[2] === 'json' || f[2] === 'geojson')) { geom = []; continue; }
       } else if (f[1][0] === fence[0] && f[1].length >= fence.length) {
         fence = null;
         if (Array.isArray(geom)) {
