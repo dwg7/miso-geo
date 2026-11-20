@@ -33,7 +33,7 @@ Context: このファイル(正本。`CLAUDE.md` はここを参照するだけ)
 
 ### 3.1 ジオメトリのインラインアノテーション
 
-`#` は踏み跡(1つの知識の単位)、`##` は踏み跡の中のセクションである。ジオメトリは踏み跡全体に結びつく空間データで、その `#` の中の `## geometry` セクションに、標準 GeoJSON Geometry(`Point`, `LineString`, `Polygon`, `GeometryCollection` 等)を1つの `json` コードブロックとして直接記述する。
+`#` は踏み跡(1つの知識の単位)、`##` は踏み跡の中のセクションである。ジオメトリは踏み跡全体に結びつく空間データで、その `#` の中の `## geometry` セクションに、標準 GeoJSON Geometry(`Point`, `LineString`, `Polygon`, `GeometryCollection` 等)を1つの `geojson` コードブロック(`json` も受け付ける)として直接記述する。GitHub 上のプレビューでも地図になる(D18)。
 
 - `## geometry` は1つの `#` に高々1つ。`### geometry` は認めない(`scripts/check_miso.py` が検査する)。
 - 踏み跡の中の個々の要素に別々の位置を結びつけたいときは、`### geometry` にせず、その要素を別の `#` に分ける(または1つの GeometryCollection / Multi* にまとめる)。
@@ -48,7 +48,7 @@ Context: このファイル(正本。`CLAUDE.md` はここを参照するだけ)
 散文による状況・背景の記述がここに入る。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [[141.3551, 43.0603], [141.3501, 43.0603]]
@@ -86,7 +86,7 @@ python3 scripts/check_miso.py
 
 ## 6. 運用ルール (Operations)
 
-- **読む順序**: `README.md`(概要)→ このファイル(守ること)→ `DECISIONS.md`(決めたことと理由)。決定を覆すときは、`DECISIONS.md` に日付つきで追記する。
+- **読む順序**: `README.md`(概要)→ このファイル(守ること)→ `DECISIONS.md`(決めたことと理由。先行例の調査は `PRIOR-ART.md`)。決定を覆すときは、`DECISIONS.md` に日付つきで追記する。
 - **`site/` を変えたら**: `npm run build` を実行し、`docs/` の変更も同じコミットに含める(GitHub Pages はビルドしない)。
 - **座標は出典から**: 目測で書かない。出典を本文に書き、現地確認までは `verified` にしない(D11)。
 - **目視確認**: ブラウザペインが非表示だと、地図の描画が進まない。確認するときはペインを表示する。

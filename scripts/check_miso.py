@@ -4,7 +4,7 @@
 Verifies that every Markdown file is UTF-8 without NUL bytes, that level-1
 virtual-path headings (`# /...`) are unique across the repository and carry one of
 the five statuses, that geometry follows the convention (at most one `## geometry`
-per `#`, never `### geometry`, a single json block holding a valid GeoJSON
+per `#`, never `### geometry`, a single json (or geojson) block holding a valid GeoJSON
 Geometry), and that no non-Markdown document formats (docx, xlsx, pdf, ...) are
 tracked as canonical data. Exit status is non-zero on any problem.
 """
@@ -100,7 +100,7 @@ def check_file(rel, text, seen, errors):
     for n, line, fence in scan(text):
         if fence is None:
             if state == "wait" and re.match(r"^#{1,6} ", line):
-                errors.append(f"{rel}:{n}: `## geometry` is not followed by a json block")
+                errors.append(f"{rel}:{n}: `## geometry` is not followed by a json/geojson block")
                 state = None
             if (h := HEADING.match(line)):
                 close_chapter()
@@ -128,7 +128,7 @@ def check_file(rel, text, seen, errors):
                     chapter["status"] = True
             continue
         # inside a code fence
-        if state == "wait" and fence == "json" and FENCE.match(line):
+        if state == "wait" and fence in ("json", "geojson") and FENCE.match(line):
             state, buf = "collect", []
         elif state == "collect":
             if FENCE.match(line):
@@ -141,7 +141,7 @@ def check_file(rel, text, seen, errors):
             else:
                 buf.append(line)
     if state == "wait":
-        errors.append(f"{rel}: `## geometry` is not followed by a json block")
+        errors.append(f"{rel}: `## geometry` is not followed by a json/geojson block")
     close_chapter()
 
 

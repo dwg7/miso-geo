@@ -23,7 +23,7 @@
 地図の線は、元の 413 点を 109 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "MultiLineString",
   "coordinates": [
@@ -155,7 +155,7 @@
 地図の線は、元の 213 点を 27 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -201,7 +201,7 @@
 地図の線は、元の 3 点を 2 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -222,7 +222,7 @@
 地図の線は、元の 116 点を 8 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -249,7 +249,7 @@
 地図の線は、元の 819 点を 107 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "MultiLineString",
   "coordinates": [
@@ -379,7 +379,7 @@
 地図の線は、元の 633 点を 50 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -448,7 +448,7 @@
 地図の線は、元の 471 点を 93 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -560,7 +560,7 @@
 地図の線は、元の 175 点を 20 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -599,7 +599,7 @@
 地図の線は、元の 166 点を 8 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
@@ -626,7 +626,7 @@
 地図の線は、元の 198 点を 15 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "MultiLineString",
   "coordinates": [
@@ -664,7 +664,7 @@
 地図の線は、元の 291 点を 39 点に間引いたもの(`/rules/sapporo-road-geometry`)。元データそのものではなく、`derived` に置く。
 
 ## geometry
-```json
+```geojson
 {
   "type": "LineString",
   "coordinates": [
